@@ -9,10 +9,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}{% endblock title %}</title>
     <link rel="stylesheet" href=" {% static "shop/css/style.css" %}">
-    <link rel="stylesheet" href=" {% static "shop/css/style.css" %}">
+    
     
 </head>
 <body>
     
 </body>
 </html>
+
+{% comment %} 1) Каждое приложение будет иметь свой urls.py, но надо не забыть присоединить его в главное urls.py (через команду include) {% endcomment %}
+{% comment %} 2) Каждое приложение имеет свою собственную templates - папку, но внутри этой папки будет обязательно папка с названием приложения {% endcomment %}
+{% comment %} 3) Каждое приложение имеет свою собственную static - папку, но внутри этой папки будет обязательно папка с названием приложения {% endcomment %}
+
+{% comment %} Создать новое приложение accounts, в котором также сделать его полностью самостоятельным (создать свой urls, свою папку templates, static {% endcomment %}
+{% comment %} https://www.figma.com/design/6zrodGGfXG0UX4OtFdj4Yp/Shoe-Shop-Website-Design-(Community)-(Copy)?node-id=1-2&node-type=frame&t=OBpuKTmsU8tLvcMW-0 {% endcomment %}
