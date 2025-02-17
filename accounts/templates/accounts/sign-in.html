@@ -1,0 +1,18 @@
+{% extends "accounts/base.html" %}
+{% block title %}Sign-in{% endblock title %}
+{% block content %}
+    <form method = "POST">
+        {% csrf_token %}
+        <h2>
+            Sign-in 
+        </h2>
+        <input type="text" name="user_name">
+        <input type="password" name="password">
+        <button class = "btn">
+            sign-in
+        </button>
+        <p>
+            {{error}}
+        </p>
+    </form>
+{% endblock content %}

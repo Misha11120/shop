@@ -1,4 +1,5 @@
 {% extends "shop/base.html" %}
+{% load static %}
 {% block title %}
 
 ShoeShop-Home
@@ -8,5 +9,51 @@ ShoeShop-Home
 {% block content %}
 
 {% include "shop/menu.html" %}
+<header class = "header">
+    <div class = "container">
+        <div class = "header__content">
+
+            <div class = "header__left">
+                <h1>
+                    <span>Stride in Style</span>: Discover Your Perfect Pair of Shoes at Our Exquisite Shoe Emporium!
+                </h1>
+                <div class = "header__buttons">
+                    <a href="" class = "btn">
+                        <i class='bx bx-cart-alt'></i> Buy & get discount
+                    </a>
+                    <a href="" class = "btn">
+                        <i class='bx bx-broadcast' ></i> Explore products
+                    </a>
+                </div>
+            </div>
+            <div class = "header__right">
+                <img src="{% static "shop/images/Shoe.png" %}" alt="">
+            </div>
+
+        </div>
+    </div>
+    
+</header>
+
+<main>
+    <div class = "container">
+        <section>
+            <h2>
+                Sports
+            </h2>
+            {% include "shop/card.html" %}
+        </section>
+        <section>
+            <h2>
+                Kids
+            </h2>
+        </section>
+        <section>
+            <h2>
+                Formal shoes
+            </h2>
+        </section>
+    </div>
+</main>
 
 {% endblock content %}

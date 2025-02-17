@@ -5,3 +5,42 @@
     padding: 0;
     box-sizing: border-box;
 }
+.container{
+    max-width: 1400px;
+    margin: 0 auto;
+    
+}
+.btn{
+    background-color: #d48166;
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: 1s;
+
+    
+}
+
+.btn:hover{
+    background-color: #f17c55;
+    box-shadow: 3px 3px 0px  #be694d9f;
+
+}
+body{
+    background-image: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%);
+}
+button{
+    border: none;
+    cursor: pointer;
+}
+input[type="text"], input[type="password"]{
+    width: 100%;
+    padding: 20px;
+    border-radius: 20px;
+    border: none;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}

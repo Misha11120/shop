@@ -1,7 +1,64 @@
-body{
-    background-image: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%);
-}
+
 
 .menu{
-    background-color:rgb(236, 174, 174);
+    background-image: linear-gradient(to right, #ffdeafe1 0%, #fda689c7 100%);
+    
 }
+
+
+
+
+.menu__content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+
+
+.menu__center{
+    display: flex;
+    gap: 10px;
+}
+.menu__right{
+    display: flex;
+    gap: 10px;
+}
+
+
+
+.menu__content a.active{
+    background-color: #d481667e;
+    border: 1px solid #d48166;
+}
+
+.header__content{
+    display: flex;
+    justify-content: space-between;
+}
+
+.header{
+    padding: 100px 0px;
+}
+
+.header__left{
+    width: 40%;
+}
+
+.header h1{
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.header span{
+    color: #d48166;
+    text-decoration: underline;
+}
+
+.header__buttons{
+    display: flex;
+    gap: 15px;
+}
+
+

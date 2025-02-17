@@ -9,6 +9,18 @@ class Brand(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
     def __str__(self) -> str:
         return self.name
+    
+class Category(models.Model):
+    name = models.CharField(max_length=100)
+    description = models.TextField(max_length=500,null=True, blank=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+    def __str__(self) -> str:
+        return self.name
+    class Meta:
+        verbose_name_plural = "categories"
+
+
 
 class Shoe(models.Model):
     name = models.CharField(max_length=150)
@@ -23,3 +35,10 @@ class Shoe(models.Model):
     gender = models.CharField(max_length=6, choices=(("female","Female"),("male","Male")))
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="shoes")
     slug = models.SlugField(unique=True)
+    category = models.ForeignKey(Category, on_delete=models.CASCADE, related_name="shoes")
+    image = models.ImageField(upload_to="brands", null=True, blank=True)
+    def __str__(self) -> str:
+        return f"{self.name}-{self.brand}"
+
+    
+
